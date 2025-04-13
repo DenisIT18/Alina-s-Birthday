@@ -11,23 +11,23 @@ function checkCode() {
 
 const images = [
     {
-      src: "images/photo_2025-04-13_19-53-14 (2).jpg",
+      src: "photo1.jpg",
       caption: "Мы вместе"
     },
     {
-      src: "images/photo_2025-04-13_19-53-14.jpg",
+      src: "photo2.jpg",
       caption: "Поцелуйчик"
     },
     {
-      src: "images/photo_2025-04-13_19-53-15 (2).jpg",
+      src: "photo3.jpg",
       caption: "Красотка и самая лучшая девушка"
     },
     {
-      src: "images/photo_2025-04-13_19-53-15 (3).jpg",
+      src: "photo4.jpg",
       caption: "Моя любимая"
     },
     {
-      src: "images/photo_2025-04-13_19-53-15.jpg",
+      src: "photo5.jpg",
       caption: "Наша любимая совместная фотография"
     }
   ];
