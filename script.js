@@ -123,3 +123,11 @@ function updateHearts() {
 }
 updateHearts();
 
+<script>
+  const password = prompt("Введите пароль:");
+  if (password !== "170923") {
+    document.body.innerHTML = "<h2 style='text-align:center;'>Доступ запрещён 🙅‍♂️</h2>";
+  }
+</script>
+
+
