@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right top, lavender, white);
+    color: #4b006e;
+    padding: 30px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    text-align: left;
+    margin-top: 15px;
+    line-height: 1.8;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 200px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #cba2f2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #b183de;
+  }
+  
+  #secretMessage {
+    margin-top: 60px; /* увеличен отступ */
+    font-size: 1.1rem;
+  }
+  
+  .from {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  .slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .slide {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .slide p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #4b006e;
+  }
+  
+  .nav {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4b006e;
+    transition: 0.3s;
+  }
+  
+  .nav:hover {
+    color: #7a32a8;
+  }
+  
+  /* Всплывающее окно */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75, 0, 110, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 320px; /* уменьшен размер */
+    transform: scale(0.95); /* слегка уменьшили масштаб */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .popup-content h3 {
+    color: #4b006e;
+    margin-bottom: 15px;
+  }
+  
+  .popup-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .popup-content button {
+    background-color: #d8b3ff;
+    color: #4b006e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .popup-content button:hover {
+    background-color: #c48dff;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Анимация сердечек */
+  #heartsCanvas {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    input {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .gallery img {
+      width: 100%;
+      max-width: 280px;
+    }
+  
+    .slider {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .slide {
+      max-width: 90%;
+    }
+  
+    .popup-content {
+      width: 90%;
+      max-width: 95%;
+      padding: 20px;
+    }
+  
+    .popup-content p {
+      font-size: 0.95rem;
+    }
+  
+    .popup-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .nav {
+      font-size: 1.5rem;
+    }
+  
+    #secretMessage {
+      font-size: 1rem;
+    }
+  }
+  

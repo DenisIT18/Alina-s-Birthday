@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>С Днём Рождения, Алина!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>С Днём Рождения, Алина!</h1>
+    <p class="subtitle">Ты — мой свет, моя радость и вдохновение 💜</p>
+
+    <div class="card">
+      <h2>Наша история</h2>
+      <ul>
+        <li>Познакомились — сентябрь 2021</li>
+        <li>Первое свидание — 17 сентября 2023</li>
+        <li>Первый фильм вместе — 10 июля 2022</li>
+        <li>Люблю твой смех каждый день</li>
+      </ul>
+    </div>
+
+    
+
+        <div class="card">
+            <h2>Фотослайдер 💜</h2>
+            <div class="slider">
+              <button class="nav left" onclick="prevSlide()">&#10094;</button>
+              
+              <div class="slide">
+                <img id="sliderImage" src="images/photo_2025-04-13_19-53-14 (2).jpg" alt="Мы вместе">
+                <p id="caption">Мы вместе</p>
+              </div>
+              
+              <button class="nav right" onclick="nextSlide()">&#10095;</button>
+            </div>
+          </div>
+          
+          <!-- Popup -->
+    <div class="popup" id="birthdayPopup">
+    <div class="popup-content">
+      <h3>Сюрприз! 🎁</h3>
+      <p>С Днём рождения, Алина! Ты — самое дорогое, что у меня есть 💖</p>
+      <button onclick="closePopup()">Закрыть</button>
+    </div>
+  </div>
+
+  <div class="popup-content">
+    <img src="images/cake.gif" alt="Happy Birthday" style="width: 100px; margin-bottom: 15px;">
+    <h3>Сюрприз! 🎁</h3>
+    <p>С Днём рождения, Алина! Ты — самое дорогое, что у меня есть 💖</p>
+    <button onclick="closePopup()">Закрыть</button>
+  </div>
+
+  <canvas id="heartsCanvas"></canvas>
+
+  
+            
+         
+    <div class="card secret">
+      <h2>Секретное послание</h2>
+      <p>Введи дату нашего первого свидания:</p>
+      <input type="text" id="codeInput" placeholder="дд.мм.гггг" />
+      <button onclick="checkCode()">Открыть</button>
+      <div id="secretMessage" class="hidden">
+        <p>Дорогая Алина, ты сделала мою жизнь ярче и теплее. Спасибо за твою любовь и нежность. Ты — лучшее, что случилось со мной. Желаю тебе самого тёплого, яркого и счастливого дня рождения!</p>
+        <p class="from">С любовью, твой программист 💻💜</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
